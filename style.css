@@ -1,0 +1,285 @@
+.redblock { /*creates a red block*/
+  height: 100px;
+  width: 150px;
+  background-color: red;
+  }
+
+.blueblock { /*creates a blue block*/
+  height: 100px;
+  width: 250px;
+  background-color: blue;
+}
+
+.yellowblock { /*creates a yellow block*/
+  height: 100px;
+  width: 350px;
+  background-color: yellow;
+}
+
+.redlayer { /* creates a red block with position:absolute.
+  This will position itself relative to the nearest relative ancestor */
+  height: 100px;
+  width: 150px;
+  background-color: red;
+  position: absolute;
+  z-index: 3;
+  display: inline-block;
+}
+
+.bluelayer { /* creates a blue block with position:absolute.
+  This will position itself relative to the nearest relative ancestor */
+  height: 110px;
+  width: 250px;
+  background-color: blue;
+  position: absolute;
+  z-index: 2;
+  display: inline-block;
+  left: 50px;
+  text-align: right;
+}
+
+.yellowlayer { /* creates a yellow block with position:relative.
+  This will position itself relative to the nearest relative ancestor */
+  height: 120px;
+  width: 350px;
+  background-color: yellow;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  left: 100px;
+  text-align: right;
+}
+
+.redborder { /* creates a red border with red text */
+  height: 100px;
+  width: 150px;
+  border: 8px solid red;
+  color: red;
+  display: inline-block;
+  position: relative;
+  }
+
+.blueborder { /* creates a blue border with blue text */
+  height: 100px;
+  width: 250px;
+  border: 8px dashed blue;
+  color: blue;
+  display: inline-block;
+  position: absolute;
+  left: 180px;
+}
+
+.yellowborder { /* creates a green border with yellow text */
+  height: 100px;
+  width: 350px;
+  border: 8px dotted yellow;
+  color: yellow;
+  display: inline-block;
+  position: absolute;
+  left: 455px;
+}
+
+@keyframes red {
+  0% {background-color: red;}
+  25% {background-color: blue;}
+  50% {background-color: yellow;}
+  75% {background-color: blue;}
+  100% {background-color: red;}
+}
+
+@keyframes blue {
+  0% {background-color: blue;}
+  25% {background-color: yellow; left: 150px;}
+  50% {background-color: red;}
+  75% {background-color: yellow;}
+  100% {background-color: blue;}
+}
+
+@keyframes yellow {
+  0% {background-color: yellow;}
+  25% {background-color: red; left: 300px;}
+  50% {background-color: blue;}
+  75% {background-color: red;}
+  100% {background-color: yellow;}
+}
+
+.anima-red { /*animates a red block*/
+  height: 100px;
+  width: 150px;
+  background-color: red;
+  animation-name: red; /* Specifies a name for the @keyframes animation: in this case, red */
+  animation-duration: 5s; /* Specifies a duration for the animation: in this case, 5 seconds */
+  position: relative;
+  display: inline-block; /* displays this block in the same line */
+  animation-iteration-count: infinite; /*   animation-iteration-count: infinite; /* repeats the animation for an infinite amount of times */
+}
+
+.anima-blue { /*animates a blue block*/
+  height: 100px;
+  width: 150px;
+  background-color: blue;
+  animation-name: blue; /* Specifies a name for the @keyframes animation: in this case, blue */
+  animation-duration: 5s; /* Specifies a duration for the animation: in this case, 5 seconds */
+  position: relative;
+  left: 0px;
+  display: inline-block; /* displays this block in the same line */
+  animation-iteration-count: infinite; /* repeats the animation for an infinite amount of times */
+}
+
+.anima-yellow { /*animates a yellow block*/
+  height: 100px;
+  width: 150px;
+  background-color: yellow;
+  animation-name: yellow; /* Specifies a name for the @keyframes animation: in this case, yellow */
+  animation-duration: 5s; /* Specifies a duration for the animation: in this case, 5 seconds */
+  position: relative;
+  left: 0px;
+  display: inline-block; /* displays this block in the same line */
+  animation-iteration-count: infinite; /* repeats the animation for an infinite amount of times */
+}
+
+@keyframes speed {
+  from {left: 0px;}
+  to {left: 400px;}
+}
+.anima-gradient { /* creates gradient with animations */
+  height: 100px;
+  width: 250px;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  animation-name: gradient;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  position: absolute;
+  left: 300px;
+  z-index: 2;
+  display: inline-block;
+  border-style: solid;
+  border-width: thick;
+  border-color: red yellow green blue;
+  border-radius: 5px 0px;
+}
+
+@keyframes gradient { /* currently set to left: 350px(I didnt set a hard position for the block and let the keyframe set the parameters) */
+  from {left: 0px;}
+  to {left: 600px;}
+}
+
+.border-gradient { /* creates border for gradient */
+  height: 100px;
+  width: 250px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: red yellow green blue; /* red top, yellow right, green bottom and blue left */
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  border-radius: 10px;
+  position: absolute;
+  display: inline-block;
+  left: 600px;
+  z-index: 3;
+}
+
+.anima-ease {
+  height: 50px;
+  width: 75px;
+  background-color: red;
+  position: relative;
+  animation-timing-function: ease;
+  animation-name: speed; /* Specifies a name for the @keyframes animation: in this case, speed */
+  animation-duration: 5s; /* Specifies a duration for the animation: in this case, 5 seconds */
+  animation-iteration-count: infinite; /* repeats the animation for an infinite amount of times */
+}
+
+.anima-linear {
+  height: 50px;
+  width: 75px;
+  background-color: red;
+  position: relative;
+  animation-timing-function: linear;
+  animation-name: speed; /* Specifies a name for the @keyframes animation: in this case, speed */
+  animation-duration: 5s; /* Specifies a duration for the animation: in this case, 5 seconds */
+  animation-iteration-count: infinite; /* repeats the animation for an infinite amount of times */
+}
+
+.anima-ease-in {
+  height: 50px;
+  width: 75px;
+  background-color: red;
+  position: relative;
+  animation-timing-function: ease-in;
+  animation-name: speed; /* Specifies a name for the @keyframes animation: in this case, speed */
+  animation-duration: 5s; /* Specifies a duration for the animation: in this case, 5 seconds */
+  animation-iteration-count: infinite; /* repeats the animation for an infinite amount of times */
+}
+
+.anima-ease-out {
+  height: 50px;
+  width: 75px;
+  background-color: red;
+  position: relative;
+  animation-timing-function: ease-out;
+  animation-name: speed; /* Specifies a name for the @keyframes animation: in this case, speed */
+  animation-duration: 5s; /* Specifies a duration for the animation: in this case, 5 seconds */
+  animation-iteration-count: infinite; /* repeats the animation for an infinite amount of times */
+}
+
+.anima-ease-in-out {
+  height: 50px;
+  width: 75px;
+  background-color: red;
+  position: relative;
+  animation-timing-function: ease-in-out;
+  animation-name: speed; /* Specifies a name for the @keyframes animation: in this case, speed */
+  animation-duration: 5s; /* Specifies a duration for the animation: in this case, 5 seconds */
+  animation-iteration-count: infinite; /* repeats the animation for an infinite amount of times */
+}
+
+.rainbow-gradient { /* creates a gradient with red orange yellow green blue indigo violet */
+  height: 100px;
+  width: 250px;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  top: 5px;
+  }
+
+.valentine-gradient { /* creates a gradient with red white and pink */
+  height: 100px;
+  width: 250px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,0.8)); /* refer to css rgb values. 255 is full color(red,blue,green)
+  0 is no color(black)full color like this--(255,255,255), is white. the 4th value is valled "alpha and controls opacity. 0.0 is fully transparent and 1.0 is no transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.usagradient { /* creates a gradient with red white and blue */
+  height: 100px;
+  width: 250px;
+  background-image: linear-gradient(to top right, red, white, blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+p {
+  font-family: verdana;
+}
+
+.block {
+
+}
+
+.body {
+  background-image: linear-gradient(to bottom right, darkslateblue, pink, grey);
+}
+
+
+.viewport {
+  height: 310vh;
+}
