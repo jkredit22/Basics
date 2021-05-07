@@ -69,7 +69,7 @@
   left: 180px;
 }
 
-.yellowborder { /* creates a green border with yellow text */
+.yellowborder { /* creates a yellow border with yellow text */
   height: 100px;
   width: 350px;
   border: 8px dotted yellow;
